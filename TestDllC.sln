@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36908.2 d17.14
+VisualStudioVersion = 17.14.36908.2
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestDllC", "TestDllC\TestDllC.vcxproj", "{4F7B24BF-BA79-4D02-A178-EC430F79E6AD}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MyNewDll", "MyNewDll\MyNewDll\MyNewDll.vcxproj", "{0B60D25A-4EB8-473D-9443-CF71959DA418}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,14 @@ Global
 		{4F7B24BF-BA79-4D02-A178-EC430F79E6AD}.Release|x64.Build.0 = Release|x64
 		{4F7B24BF-BA79-4D02-A178-EC430F79E6AD}.Release|x86.ActiveCfg = Release|Win32
 		{4F7B24BF-BA79-4D02-A178-EC430F79E6AD}.Release|x86.Build.0 = Release|Win32
+		{0B60D25A-4EB8-473D-9443-CF71959DA418}.Debug|x64.ActiveCfg = Debug|x64
+		{0B60D25A-4EB8-473D-9443-CF71959DA418}.Debug|x64.Build.0 = Debug|x64
+		{0B60D25A-4EB8-473D-9443-CF71959DA418}.Debug|x86.ActiveCfg = Debug|Win32
+		{0B60D25A-4EB8-473D-9443-CF71959DA418}.Debug|x86.Build.0 = Debug|Win32
+		{0B60D25A-4EB8-473D-9443-CF71959DA418}.Release|x64.ActiveCfg = Release|x64
+		{0B60D25A-4EB8-473D-9443-CF71959DA418}.Release|x64.Build.0 = Release|x64
+		{0B60D25A-4EB8-473D-9443-CF71959DA418}.Release|x86.ActiveCfg = Release|Win32
+		{0B60D25A-4EB8-473D-9443-CF71959DA418}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -14,12 +14,13 @@ struct User {
 
 
 User* userlist = NULL;
+User* searchRes = NULL;
 size_t userCount = 0;
 
 
 BOOL WINAPI DllMain(HINSTANCE hlnstDll, DWORD dwReason, LPVOID IpReserved)
 {
-    MessageBoxA(NULL, "NEW DLL LOADED", "DEBUG", MB_OK);
+   /* MessageBoxA(NULL, "NEW DLL LOADED", "DEBUG", MB_OK);*/
     BOOL bAllWentWell = TRUE;
     switch (dwReason)
     {
@@ -86,18 +87,56 @@ BOOL ParseUserLine(const char* line)
 
 
     AddUser(surname, name, patronymic, age);
+    if (userCount == 0) {
+        printf("not was added");
+    }
     return TRUE;
 }
 
+extern "C" __declspec(dllexport)
+int SearchBySurname(char* searchStr) {
 
+    int tmpCount = 0;
+    for (size_t i = 0; i < userCount; i++)
+    {
+        if (strstr(userlist[i].Surname, searchStr)) {
+            tmpCount++;
+        }
+    }
+ 
+    User* tmp = (User*)calloc(tmpCount, sizeof(User));
+    searchRes = tmp;
+
+    int j = 0;
+    for (size_t i = 0; i < userCount; i++)
+    {
+        if (strstr(userlist[i].Surname, searchStr)) {
+            searchRes[j] = userlist[i];
+            j++;
+        }
+    }
+
+    printf("\nРезультаты поиска:\n");
+    for (size_t i = 0; i < tmpCount; i++)
+    {
+        {
+            printf("%s %s %s\n", searchRes[i].Surname, searchRes[i].Name, searchRes[i].Patronynic);
+        }
+    }
+    return tmpCount;
+
+}
 
 extern "C" __declspec(dllexport)
-int ReadData(LPWSTR str)
+int ReadData()
 {
-    MessageBoxA(NULL, "NEW DLL LOADED", "DEBUG", MB_OK);
-    const char* path = "C:\\SystemProgramming\\MyNewDll\\x64\\Users.csv";
+    const char* path = "D:\\SystemProgramming\\TestDll\\Users.csv";
 
     FILE* file = fopen(path, "r");
+    if (!file) {
+        printf("Error reading of file");
+        return -2;
+    }
 
     int added = 0;
     char line[256];
@@ -126,4 +165,43 @@ void ShowAllList() {
             printf("%s %s %s\n", userlist[i].Surname, userlist[i].Name, userlist[i].Patronynic);
         }
     }
+}
+
+
+extern "C" __declspec(dllexport)
+int WriteData(const char* path, User* arr, int count)
+{
+    FILE* file = fopen(path, "w");
+    if (!file) {
+        printf("Error writing of file");
+        return -2;
+    }
+
+    int written = 0;
+    for (size_t i = 0; i < count; i++)
+    {
+        fprintf(file, "%s;%s;%s;%d\n",
+            arr[i].Surname,
+            arr[i].Name,
+            arr[i].Patronynic,
+            arr[i].Age);
+        written++;
+    }
+
+    fclose(file);
+    return written;
+}
+
+extern "C" __declspec(dllexport)
+double AvgAge(User* arr, int count)
+{
+    if (!arr || count == 0)
+        return 0.0;
+
+    int sum = 0;
+    for (size_t i = 0; i < count; i++)
+    {
+        sum += arr[i].Age;
+    }
+    return (double)sum / (double)count;
 }

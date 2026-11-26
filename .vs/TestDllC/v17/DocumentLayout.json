@@ -1,10 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\SystemProgramming\\TestDllC\\",
+  "WorkspaceRootPath": "D:\\SystemProgramming\\TestDll\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4F7B24BF-BA79-4D02-A178-EC430F79E6AD}|TestDllC\\TestDllC.vcxproj|C:\\SystemProgramming\\TestDllC\\TestDllC\\TestDllC.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{4F7B24BF-BA79-4D02-A178-EC430F79E6AD}|TestDllC\\TestDllC.vcxproj|D:\\SystemProgramming\\TestDll\\TestDllC\\TestDllC.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{4F7B24BF-BA79-4D02-A178-EC430F79E6AD}|TestDllC\\TestDllC.vcxproj|solutionrelative:TestDllC\\TestDllC.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B60D25A-4EB8-473D-9443-CF71959DA418}|MyNewDll\\MyNewDll\\MyNewDll.vcxproj|D:\\SystemProgramming\\TestDll\\MyNewDll\\MyNewDll\\dllmain.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0B60D25A-4EB8-473D-9443-CF71959DA418}|MyNewDll\\MyNewDll\\MyNewDll.vcxproj|solutionrelative:MyNewDll\\MyNewDll\\dllmain.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -22,29 +26,42 @@
             },
             {
               "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{a80febb4-e7e0-4147-b476-21aaf2453969}"
             },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:4:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "dllmain.c",
+              "DocumentMoniker": "D:\\SystemProgramming\\TestDll\\MyNewDll\\MyNewDll\\dllmain.c",
+              "RelativeDocumentMoniker": "MyNewDll\\MyNewDll\\dllmain.c",
+              "ToolTip": "D:\\SystemProgramming\\TestDll\\MyNewDll\\MyNewDll\\dllmain.c",
+              "RelativeToolTip": "MyNewDll\\MyNewDll\\dllmain.c",
+              "ViewState": "AgIAAKIAAAAAAAAAAAAAALkAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2026-11-26T17:57:30.46Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "TestDllC.c",
-              "DocumentMoniker": "C:\\SystemProgramming\\TestDllC\\TestDllC\\TestDllC.c",
+              "DocumentMoniker": "D:\\SystemProgramming\\TestDll\\TestDllC\\TestDllC.c",
               "RelativeDocumentMoniker": "TestDllC\\TestDllC.c",
-              "ToolTip": "C:\\SystemProgramming\\TestDllC\\TestDllC\\TestDllC.c",
+              "ToolTip": "D:\\SystemProgramming\\TestDll\\TestDllC\\TestDllC.c",
               "RelativeToolTip": "TestDllC\\TestDllC.c",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAACQAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2026-11-24T06:24:30.333Z",
               "EditorCaption": ""

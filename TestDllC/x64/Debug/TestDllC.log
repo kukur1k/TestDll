@@ -1,0 +1,3 @@
+﻿  TestDllC.c
+D:\SystemProgramming\TestDll\TestDllC\TestDllC.c(64,18): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+  TestDllC.vcxproj -> D:\SystemProgramming\TestDll\x64\Debug\TestDllC.exe
